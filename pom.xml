@@ -9,7 +9,7 @@
   <artifactId>joda-money</artifactId>
   <packaging>jar</packaging>
   <name>Joda-Money</name>
-  <version>0.10.1-SNAPSHOT</version>
+  <version>0.10.1-embeddable-money</version>
   <description>Money representation and formatting</description>
   <url>http://www.joda.org/joda-money/</url>
 
@@ -492,22 +492,18 @@
   </reporting>
 
   <!-- ==================================================================== -->
-  <distributionManagement>
-    <repository>
-      <id>sonatype-joda-staging</id>
-      <name>Sonatype OSS staging repository</name>
-      <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-      <layout>default</layout>
-    </repository>
-    <snapshotRepository>
-      <uniqueVersion>false</uniqueVersion>
-      <id>sonatype-joda-snapshot</id>
-      <name>Sonatype OSS snapshot repository</name>
-      <url>http://oss.sonatype.org/content/repositories/joda-snapshots</url>
-      <layout>default</layout>
-    </snapshotRepository>
-    <downloadUrl>http://oss.sonatype.org/content/repositories/joda-releases</downloadUrl>
-  </distributionManagement>
+    <distributionManagement>
+        <repository>
+            <id>wahanda</id>
+            <name>Wahanda Release Repository</name>
+            <url>http://nexus.dev.wahanda.com/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>wahanda</id>
+            <name>Wahanda Snapshot Repository</name>
+            <url>http://nexus.dev.wahanda.com/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
   <!-- ==================================================================== -->
   <profiles>
